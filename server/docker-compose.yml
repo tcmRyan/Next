@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  db:
+    image: postgres:11.16
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=next
+      - POSTGRES_USER=nextUser
+      - POSTGRES_PASSWORD=nextPass
+
+volumes:
+  postgres_data:

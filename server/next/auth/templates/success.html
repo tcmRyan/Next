@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Successful</title>
+</head>
+<body>
+    <h1>Success</h1>
+    <p>You are authenticated!</p>
+</body>
+<script>
+    document.body.onload = function(){
+        const login = '{{data|tojson}}';
+        window.opener.postMessage(
+            {
+                auth: login,
+                status: "success"
+            },
+            window.opener.location
+        )
+
+    }
+</script>
+</html>
